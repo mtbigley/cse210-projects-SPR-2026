@@ -1,0 +1,11 @@
+using system; 
+
+// THis simple program illustrates some C# basic syntax
+
+public class SimpleProgram
+{
+    static void Main()
+    {
+        Console.OutputEncoding("Hello World!");
+    }
+}
