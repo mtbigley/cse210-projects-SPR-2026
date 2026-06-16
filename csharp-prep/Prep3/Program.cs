@@ -18,21 +18,29 @@ class Program
 
         // parse user guess 
         double guessNum = double.Parse(guess);
-
-        // if statement to determine if user needs to go higher or lower
-        if (guessNum > magicNum)
+        
+        do
         {
-            Console.WriteLine("Try guessing lower!");
-        }
+            // if statement to determine if user needs to go higher or lower
+            if (guessNum > magicNum)
+            {
+                Console.WriteLine("Try guessing lower!");
+            }
 
-        else if (guessNum < magicNum)
-        {
-            Console.WriteLine("Try guessing higher!");
-        }
+            else if (guessNum < magicNum)
+            {
+                Console.WriteLine("Try guessing higher!");
+            }
 
-        else
-        {
-            Console.WriteLine("You got it!");
-        }
+            if (guessNum != magicNum)
+            {
+                Console.WriteLine("What is your guess?"); 
+                guess = Console.ReadLine();
+                guessNum = double.Parse(guess); 
+            }
+
+        } while (guessNum != magicNum); 
+
+        Console.WriteLine("You got it!");
     }
 }
