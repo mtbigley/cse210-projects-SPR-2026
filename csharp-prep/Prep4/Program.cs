@@ -15,7 +15,7 @@ class Program
         // initialize input variable 'number'
         double number; 
 
-        // Loop while number entered != 0
+        // Loop while number entered != 0 to retrieve as many user entered numbers as entered
         do
         {
             // retrieve user number 
@@ -32,5 +32,28 @@ class Program
 
         } while (number != 0);
 
+        // Crunch the numbers
+
+        // Sum
+        double sumOfNumbers = numbers.Sum();
+        Console.WriteLine($"The sum is: {sumOfNumbers}");
+
+        // Average
+        double avgOfNumbers = numbers.Average();
+        Console.WriteLine($"The average is: {avgOfNumbers}");
+
+        // Largest
+        double lrgOfNumbers = numbers.Max(); 
+        Console.WriteLine($"The largest number is: {lrgOfNumbers}");
+
+        // Smallest
+        double smlOfNumbers = numbers.Min(); 
+        Console.WriteLine($"The smallest number is: {smlOfNumbers}");
+
+        // // test print list
+        // foreach (double value in numbers)
+        // {
+        //     Console.WriteLine(value);
+        // }
     }
 }
