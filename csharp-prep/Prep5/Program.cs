@@ -15,9 +15,9 @@ class Program
         {
             // Store user input into string named Username
             Console.Write("Please enter your name: ");
-            string Username = Console.ReadLine();
+            string username = Console.ReadLine();
 
-            return Username; 
+            return username; 
         }
 
         // Define Favorite number prompt function
@@ -28,9 +28,9 @@ class Program
             string input = Console.ReadLine(); 
 
             // parse FavoriteNumber
-            int FavoriteNumber = int.Parse(input);
+            int favoriteNumber = int.Parse(input);
 
-            return FavoriteNumber;
+            return favoriteNumber;
         }
 
         // Define Birth year prompt function
@@ -41,17 +41,44 @@ class Program
             string input = Console.ReadLine(); 
 
             // parse BirthYear
-            int BirthYear = int.Parse(input); 
+            int birthYear = int.Parse(input); 
 
-            return BirthYear;
-
+            return birthYear;
         }
 
+        // Define SquareNumber function
+        int SquareNumber(int number)
+        {
+            // take parameter number and square it
+            int squaredNumber = number * number; 
 
-        // Call functions 
+            return squaredNumber; 
+        }
+
+        // Define Display results function
+        void DisplayResults(string username, int favoriteNumber, int birthYear)
+        {
+            /* Crunch the numbers */
+            
+            // Square the favorite number 
+            int faveSquared = SquareNumber(favoriteNumber);
+
+            // fetch current year for age calc
+            int currentYear = DateTime.Now.Year; 
+
+            // Calculate current age
+            int ageinYears = currentYear - birthYear; 
+
+            // Display results
+            Console.WriteLine($"{username}, the square of your favorite number is {faveSquared}");
+            Console.WriteLine($"{username}, you will turn {ageinYears} this year.");
+        }
+
+        // Call functions and store results into useable variables
         DisplayWelcome();
-        PromptUserName(); 
-        PromptUserNumber();
-        PromptUserBirthYear(); 
+        string Username = PromptUserName(); 
+        int UserNumber = PromptUserNumber();
+        int UserBirthYear = PromptUserBirthYear(); 
+        DisplayResults(Username, UserNumber, UserBirthYear); 
     }
 }
