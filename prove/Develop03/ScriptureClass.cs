@@ -1,9 +1,9 @@
 using System; 
-
+using System.Collections.Generic; 
 public class Scripture()
 {
-    private string scriptureText; // all of the words in the scripture
-    private string reference; // the string form of the compiled reference including book, chapter and verse(s)
+    private List<Word> _words; // list of Word classes each with their own hidden/not hidden attributes. 
+    private Reference _reference; // initialize reference class designed to contain book chapter and verse. 
 
     public Scripture() // constructor default placeholder scripture 
     {
