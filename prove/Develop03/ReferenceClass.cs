@@ -33,7 +33,7 @@ public class Reference
         }
         else // if endverse has a nonzero value 
         {
-            return $"{_book} {_chapter}:{_verse}:{_endVerse}"; 
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}"; 
         }
     }
 }
