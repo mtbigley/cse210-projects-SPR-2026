@@ -4,7 +4,8 @@ public class Scripture
 {
     private List<Word> _words; // list of Word classes each with their own hidden/not hidden attributes. 
     private Reference _reference; // initialize reference class designed to contain book chapter and verse. 
-
+    private Random _random = new Random(); // generate random numebr
+    
     public Scripture(Reference reference, string scriptureText) // default constructor
     {
         _reference = reference; // store the reference class into a variable
@@ -39,13 +40,28 @@ public class Scripture
 
     public void HideRandomWords() // hides 3 random words
     {
-        Random random = new Random(); // generate random numebr
+        int wordsToHide = 3;
 
-        for (int i = 0; i < 3; i++) // hide randomly selected word using generated number
+        for (int i = 0; i < wordsToHide; i++) // hide randomly selected word using generated number
         {
+            if (IsCompletelyHidden()) // end when completely hidden
+            {
+                break;
+            }
+
+            int randomIndex; 
+
+            do 
+            {
+                randomIndex = _random.Next(_words.Count); 
+
+            } while (_words[randomIndex].IsHidden()); // keep picking until finding a visible word 
+
+            _words[randomIndex].Hide();
+            /* *** OLD CODE *** 
             int randomNumber = random.Next(_words.Count); 
 
-            _words[randomNumber].Hide(); 
+            _words[randomNumber].Hide(); */
         }
     }
 
@@ -60,5 +76,4 @@ public class Scripture
         }
     return true; 
     }
-    
 }
