@@ -39,9 +39,9 @@ public class Scripture
 
     public void HideRandomWords() // hides 3 random words
     {
-        Random random = new Random(); 
+        Random random = new Random(); // generate random numebr
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) // hide randomly selected word using generated number
         {
             int randomNumber = random.Next(_words.Count); 
 
@@ -49,5 +49,15 @@ public class Scripture
         }
     }
 
-    
+    public bool IsCompletelyHidden() // true if every word is hid
+    {
+        foreach (Word word in _words)
+        {
+            if (!word.IsHidden()) // if a word is visible return false
+            {
+                return false; 
+            }
+        }
+    return true; 
+    }
 }
