@@ -21,4 +21,22 @@ public class Word
         _isHidden = false; 
     }
 
+    public string DisplayText() // Dispay text unless _isHidden is true 
+    {
+        if (_isHidden == true)
+        {
+            string hiddenword = "";
+
+            for (int i = 0; i < _text.Length; i++) // return underscores for each letter in the length of the word 
+            {
+                hiddenword += "_"; 
+            }
+
+            return hiddenword; 
+        }
+        else
+        {
+            return _text; // display word normal if _isHidden is false 
+        }
+    }
 }
