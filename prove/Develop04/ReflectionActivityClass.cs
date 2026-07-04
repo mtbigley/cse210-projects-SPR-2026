@@ -11,6 +11,8 @@ public class ReflectionActivity : Activity
     {
         StartActivity();
 
+        Console.WriteLine("Consider the following prompt:");
+
         int activityDuration = GetDuration();
         DateTime endTime = DateTime.Now.AddSeconds(activityDuration);
 
@@ -24,8 +26,8 @@ public class ReflectionActivity : Activity
             
             var randomPrompt = new Random(); // interesting that random cannot be implicitly forced into an int variable type-- another useage of var from stack overflow here
             int indexP = randomPrompt.Next(prompts.Count);
-            Console.WriteLine(prompts[indexP]);
-            Console.WriteLine("Press enter when you have your answer.");
+            Console.WriteLine($"----{prompts[indexP]}----");
+            Console.WriteLine("When you have something in mind, press enter to continue.");
             Console.ReadLine();
             Spinner(2);
 

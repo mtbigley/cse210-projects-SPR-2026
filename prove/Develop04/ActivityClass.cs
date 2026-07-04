@@ -26,7 +26,7 @@ public class Activity
         _duration = int.Parse(Console.ReadLine()); 
 
         Console.WriteLine();
-        Console.WriteLine("Starting activity...");
+        Console.WriteLine($"Get ready to start your {_activityName} activity...");
         Spinner(3);
     }
 
