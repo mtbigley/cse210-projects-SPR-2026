@@ -6,6 +6,7 @@
         {
 
             Activity spin = new Activity("spin", "spinning animation");
+            Activity count = new Activity ("count", "countdown timer");
 
             while(true)
             {
@@ -27,6 +28,8 @@
                 if (input == "1")
                 {
                     Console.WriteLine("Starting Breathing activity");
+                    BreathingActivity breathing = new BreathingActivity();
+                    breathing.RunBreathingActivity();
                 }
                 
                 else if (input == "2")
@@ -54,7 +57,7 @@
                 Console.WriteLine();
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
-            } 
+            }
         }
 
 
@@ -78,4 +81,12 @@
             test.Countdown(5);
             Console.WriteLine();
             Console.WriteLine("Test complete"); */
+
+        /*// BREATHING ACTIVITY TEST CODE
+            BreathingActivity test = new BreathingActivity(); 
+
+            test.RunBreathingActivity();
+            
+            Console.WriteLine();
+            Console.WriteLine("test complete");*/
     }
