@@ -21,7 +21,7 @@
                 Console.WriteLine();
 
                 string input = Console.ReadLine();
-                
+
                 spin.Spinner(1);
 
                 if (input == "1")
@@ -54,24 +54,8 @@
                 Console.WriteLine();
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
-
-
-
-            }
+            } 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -86,4 +70,12 @@
             test.Spinner(5);
             Console.WriteLine();
             Console.WriteLine("Test complete"); */ 
+
+        /* // COUNTDOWN FUNCTIONALITY TEST CODE
+            Activity test = new Activity("test", "testing countdown");
+            
+            Console.WriteLine("Testing Countdown for 5 seconds");
+            test.Countdown(5);
+            Console.WriteLine();
+            Console.WriteLine("Test complete"); */
     }
