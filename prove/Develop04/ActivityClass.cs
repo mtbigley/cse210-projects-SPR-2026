@@ -4,7 +4,7 @@ public class Activity
 {
     private string _activityName; 
     private string _activityDescription;
-    private int _duration; // entered in seconds, convert later
+    private int _duration;
 
     public Activity(string name, string description)
     {

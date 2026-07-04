@@ -17,8 +17,11 @@ public class BreathingActivity : Activity
 
         if (currentTime < endTime)
         {
-            //placeholder
+            Console.WriteLine("Breathe in...");
+            Countdown(4);
+            Console.WriteLine("Breathe out...");
+            Countdown(6);
         }
-
+        EndActivity();
     }
 }
