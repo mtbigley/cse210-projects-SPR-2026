@@ -42,6 +42,8 @@
                 else if (input == "3")
                 {
                     Console.WriteLine("Starting Listing activity");
+                    ListingActivity listing = new ListingActivity();
+                    listing.RunListingActivity();
                 }
 
                 else if (input == "4")
