@@ -50,10 +50,11 @@ public class ReflectionActivity : Activity
         Spinner(2);
 
         // Display reflection questions at 10s intervals with spinner
-        while (DateTime.Now < endTime)
+        while (DateTime.Now < endTime && questions.Count > 0)
         {
             int indexQ = randomQuestion.Next(questions.Count);
             Console.WriteLine(questions[indexQ]);
+            questions.RemoveAt(indexQ);
             Spinner(10);
         }
         Spinner(2);
