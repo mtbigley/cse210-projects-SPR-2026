@@ -16,6 +16,7 @@ public class ReflectionActivity : Activity
         int activityDuration = GetDuration();
         DateTime endTime = DateTime.Now.AddSeconds(activityDuration);
 
+        // lists of prompts and questions
         List<string> prompts = new List<string>()
             {
                 "Think of a time when you stood up for someone else.",
@@ -23,19 +24,8 @@ public class ReflectionActivity : Activity
                 "Think of a time when you helped someone in need.",
                 "Think of a time when you did something truly selfless."
             };
-            
-            var randomPrompt = new Random(); // interesting that random cannot be implicitly forced into an int variable type-- another useage of var from stack overflow here
-            int indexP = randomPrompt.Next(prompts.Count);
-            Console.WriteLine($"----{prompts[indexP]}----");
-            Console.WriteLine("When you have something in mind, press enter to continue.");
-            Console.ReadLine();
-            Spinner(2);
 
-        while (DateTime.Now < endTime)
-        {
-            
-
-            List<string> questions = new List<string>()
+        List<string> questions = new List<string>()
             {
                 "Why was this experience meaningful to you?",
                 "Have you ever done anything like this before?",
@@ -48,7 +38,20 @@ public class ReflectionActivity : Activity
                 "How can you keep this experience in mind in the future?"
             };
 
-            var randomQuestion = new Random(); 
+        // Random number generators for prompt and question indices 
+        var randomPrompt = new Random(); // interesting that random cannot be implicitly forced into an int variable type-- another useage of var from stack overflow here
+        var randomQuestion = new Random(); 
+
+        // display prompt text
+        int indexP = randomPrompt.Next(prompts.Count);
+        Console.WriteLine($"----{prompts[indexP]}----");
+        Console.WriteLine("When you have something in mind, press enter to continue.");
+        Console.ReadLine();
+        Spinner(2);
+
+        // Display reflection questions at 10s intervals with spinner
+        while (DateTime.Now < endTime)
+        {
             int indexQ = randomQuestion.Next(questions.Count);
             Console.WriteLine(questions[indexQ]);
             Spinner(10);
