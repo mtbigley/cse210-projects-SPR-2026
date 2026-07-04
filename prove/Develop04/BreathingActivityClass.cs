@@ -2,8 +2,23 @@ using System;
 
 public class BreathingActivity : Activity
 {
-    public BreathingActivity() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.")
+    public BreathingActivity() : base("Breathing" /* name */, "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing." /* activity description */)
     {
         
+    }
+
+    public void RunBreathingActivity()
+    {
+        StartActivity();
+
+        DateTime currentTime = DateTime.Now;
+        int activityDuration = GetDuration();
+        DateTime endTime = currentTime.AddSeconds(activityDuration);
+
+        if (currentTime < endTime)
+        {
+            //placeholder
+        }
+
     }
 }

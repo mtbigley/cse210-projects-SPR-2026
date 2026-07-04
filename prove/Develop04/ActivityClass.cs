@@ -30,7 +30,7 @@ public class Activity
 
         Console.WriteLine();
         Console.WriteLine("Starting activity...");
-        Spinner(1);
+        Spinner(2);
     }
 
     // spinner 
@@ -59,8 +59,14 @@ public class Activity
     {
         Console.WriteLine();
         Console.WriteLine("Well done :]");
-        Spinner(1);
+        Spinner(2);
         Console.WriteLine($"You've completed {_duration} seconds of the {_activityName} activity.");
+    }
+
+    // duration getter
+    public int GetDuration()
+    {
+        return _duration;
     }
 }
 
