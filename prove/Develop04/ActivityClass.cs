@@ -12,7 +12,6 @@ public class Activity
         _activityDescription = description;
     }
 
-
     public void StartActivity()
     {
         // Intro message
@@ -21,7 +20,7 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine($"{_activityDescription}");
         Console.WriteLine("How long would you like your activity session (in seconds) to last?");
-        
+
         /* string input = Console.ReadLine();
         _duration = int.Parse(input); */ 
         
