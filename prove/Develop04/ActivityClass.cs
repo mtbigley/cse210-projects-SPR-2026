@@ -16,10 +16,11 @@ public class Activity
     {
         // Intro message
         Console.Clear();
+        Spinner(1);
         Console.WriteLine($"Welcome to the {_activityName} activity.");
         Console.WriteLine();
         Console.WriteLine($"{_activityDescription}");
-        Spinner(2); // let user read activity descriptions for a few seconds before prompting duration input
+        Spinner(2);
         Console.WriteLine("How long would you like your activity session (in seconds) to last?");
 
         /* string input = Console.ReadLine();

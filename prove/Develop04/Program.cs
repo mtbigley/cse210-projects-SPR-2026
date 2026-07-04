@@ -6,7 +6,7 @@
         {
 
             Activity spin = new Activity("spin", "spinning animation");
-            Activity count = new Activity ("count", "countdown timer");
+            Activity count = new Activity ("count", "countdown timer"); // put this here just in case, realizing I might not need it in program.cs-- I'll keep it around for a few more commits just in case 
 
             while(true)
             {
