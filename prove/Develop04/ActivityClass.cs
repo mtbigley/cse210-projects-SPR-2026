@@ -21,12 +21,21 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine($"{_activityDescription}");
         Console.WriteLine("How long would you like your activity session (in seconds) to last?");
-        string input = Console.ReadLine();
-        _duration = int.Parse(input);
+        /* string input = Console.ReadLine();
+        _duration = int.Parse(input); */ // Nathan suggested a more elegant way to do this part, see below
+
+        _duration = int.Parse(Console.ReadLine()); 
 
         Console.WriteLine();
         Console.WriteLine("Starting activity...");
-        // loading bar goes here
-        
+        // spinner time
+
+        /* Console.Write("+");
+
+        Thread.Sleep(500);
+
+        Console.Write("\b \b"); // Erase the + character
+        Console.Write("-"); // Replace it with the - character */ // copy pasted from the assignment suggestion-- gonna do some tinkering 
+
     }
 }
