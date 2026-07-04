@@ -35,11 +35,13 @@
                 else if (input == "2")
                 {
                     Console.WriteLine("Starting Reflection activity");
+                    ReflectionActivity reflection = new ReflectionActivity(); 
+                    reflection.RunReflectionActivity();
                 }
 
                 else if (input == "3")
                 {
-                    Console.WriteLine("Starting Listening activity");
+                    Console.WriteLine("Starting Listing activity");
                 }
 
                 else if (input == "4")
