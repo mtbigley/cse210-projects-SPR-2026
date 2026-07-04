@@ -28,9 +28,10 @@ public class Activity
 
         Console.WriteLine();
         Console.WriteLine("Starting activity...");
+        Spinner(1);
     }
 
-    // spinner time
+    // spinner 
     public void Spinner(int seconds)
     {
         List<string> spinners = new List<string>()
@@ -38,7 +39,7 @@ public class Activity
             "|", "/", "-", "\\" // ran into a "newline in constant" error trying to enter "\" into the list, found the solution on a stack Overflow question that it needs to be doubled? "\\"? Gonna need to look into that more
         };
 
-        // loop 
+        // spinner loop 
         var startTime = DateTime.UtcNow; 
         while(DateTime.UtcNow - startTime < TimeSpan.FromSeconds(seconds))
         {
@@ -46,17 +47,19 @@ public class Activity
             {
                 Console.Write(symbol); 
                 Thread.Sleep(300);
-                Console.Write("\b \b");
-                
+                Console.Write("\b \b");   
             }
         }
     }
 
-
-        /* Console.Write("+");
-
-        Thread.Sleep(500);
-
-        Console.Write("\b \b"); // Erase the + character
-        Console.Write("-"); // Replace it with the - character */ // copy pasted from the assignment suggestion-- gonna do some tinkering 
+    // Ending activity
+    public void EndActivity()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Well done :]");
+        Spinner(1);
+        Console.WriteLine($"You've completed {_duration} seconds of the {_activityName} activity.");
+    }
 }
+
+      
