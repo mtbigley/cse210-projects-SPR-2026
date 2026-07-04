@@ -11,8 +11,6 @@ public class ListingActivity : Activity
     {
         StartActivity();
 
-        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
-
         //prompts and random selection thereof
         List<string> prompts = new List<string>()
         {
@@ -29,7 +27,7 @@ public class ListingActivity : Activity
 
         // display prompt 
         Console.WriteLine($"---{prompts[indexP]}---");
-        Console.WriteLine($"Please use the next 10 seconds to consider the prompt and prepare to list answers.");
+        Console.WriteLine("Please use the next 10 seconds to consider the prompt and prepare to list answers.");
         Spinner(4); // buffer for user to read 
         Countdown(10); // countdown for user to think of answers
 
@@ -37,6 +35,9 @@ public class ListingActivity : Activity
         Console.WriteLine();
         Console.WriteLine("Please enter as many answers to the prompt as you can:");
         Console.WriteLine("Press enter while the field is blank to end early"); 
+        Spinner(4);
+
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
         
         // establish list of answers
         List<string> answers = new List<string>();

@@ -82,7 +82,7 @@
             Activity test = new Activity("test", "testing countdown");
             
             Console.WriteLine("Testing Countdown for 5 seconds");
-            test.Countdown(5);
+            test.Countdown(15);
             Console.WriteLine();
             Console.WriteLine("Test complete"); */
 

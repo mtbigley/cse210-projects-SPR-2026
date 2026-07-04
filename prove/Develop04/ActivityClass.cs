@@ -56,9 +56,8 @@ public class Activity
     {
         for (int i = seconds; i > 0; i--)
         {
-            Console.Write(i);
+            Console.Write($"\r{i} ");
             Thread.Sleep(1000);
-            Console.Write("\b \b");
         }
         Console.WriteLine();
     }
