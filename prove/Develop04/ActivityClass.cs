@@ -21,8 +21,11 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine($"{_activityDescription}");
         Console.WriteLine("How long would you like your activity session (in seconds) to last?");
+        
         /* string input = Console.ReadLine();
-        _duration = int.Parse(input); */ // Nathan suggested a more elegant way to do this part, see below
+        _duration = int.Parse(input); */ 
+        
+        // Nathan suggested a more elegant way to do this part, see below
 
         _duration = int.Parse(Console.ReadLine()); 
 
