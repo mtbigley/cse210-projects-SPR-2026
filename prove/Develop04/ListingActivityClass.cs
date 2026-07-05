@@ -56,6 +56,10 @@ public class ListingActivity : Activity
             answers.Add(input);
         }
         
-        Console.WriteLine("");
+        // display the number of items entered
+        Console.WriteLine();
+        Console.WriteLine($"You entered {answers.Count} items!");
+
+        EndActivity();
     }
 }
