@@ -1,3 +1,12 @@
+    /* Exceeding requirements: 
+    My main push for exceeding requirements in this week's develop project was by ensuring in the execution of the reflection 
+    activity, no duplicate questions would be asked to the user while reflecting on their assigned prompt. I achieved this by 
+    initializing the list of questions, then iterating through it on a loop to print new questions with time in between as 
+    specified. Then, at the end of the loop, my program simply removes that index item from the list and runs again. Duplicates 
+    aren't allowed to Console.Write to the user because they're simply not on the list anymore. I'm tempted to run it back this 
+    next week if I have time and work on tracking the statistics of how many times the user has executed each activity and 
+    tracking activity time as well. */
+    
     using System;
 
     class Program
