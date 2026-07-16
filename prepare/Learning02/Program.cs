@@ -21,13 +21,15 @@ class Program
         resume1._jobs.Add(job1);
         resume1._jobs.Add(job2);
 
-        Console.WriteLine($"{resume1._jobs[0]._jobTitle}");
-
+        resume1.DisplayResumeDetails();
     }
 }
+// Old code commented out
 
 // job1.DisplayJobDetails();
 // job2.DisplayJobDetails();
 
 // Console.WriteLine($"{job._jobTitle}");
 // Console.WriteLine($"{job2._jobTitle}");
+
+// Console.WriteLine($"{resume1._jobs[0]._jobTitle}");
