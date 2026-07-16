@@ -37,7 +37,25 @@ class Program
 
                     journal.AddEntry(entry);
                 }
+            
+            else if (input == "2")
+            {
+                journal.DisplayAll();
+            }
 
+            else if (input == "3")
+            {
+                Console.Write("Enter file name:");
+                string fileName = Console.ReadLine(); 
+                journal.LoadFromFile(fileName);
+            }
+
+            else if (input == "4")
+            {
+                Console.WriteLine("Enter file name:");
+                string fileName = Console.ReadLine(); 
+                journal.SaveToFile(fileName);
+            }
 
             else if (input == "5")
             {
