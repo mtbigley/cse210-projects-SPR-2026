@@ -1,4 +1,6 @@
 using System; 
+using System.IO; 
+
 
 public class Journal
 {
@@ -15,5 +17,16 @@ public class Journal
         {
             entry.Display(); 
         }
+    }
+
+    string fileName = "JournalEntries.txt";
+    public void SaveToFile()
+    {
+        using (StreamWriter outputFile = new StreamWriter(fileName));
+
+            foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._entry}");
+            }
     }
 }
