@@ -4,8 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning02 World!");
-
         Job job1 = new Job(); 
         job1._jobTitle = "Software Engineer";
         job1._company = "Microsoft";
@@ -18,11 +16,18 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
+        Resume resume1 = new Resume(); 
+        resume1._name = "Allison Rose";
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
 
-        job1.DisplayJobDetails();
-        job2.DisplayJobDetails();
+        Console.WriteLine($"{resume1._jobs[0]._jobTitle}");
 
-        // Console.WriteLine($"{job._jobTitle}");
-        // Console.WriteLine($"{job2._jobTitle}");
     }
 }
+
+// job1.DisplayJobDetails();
+// job2.DisplayJobDetails();
+
+// Console.WriteLine($"{job._jobTitle}");
+// Console.WriteLine($"{job2._jobTitle}");
