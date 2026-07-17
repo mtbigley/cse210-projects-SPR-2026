@@ -13,12 +13,15 @@ public class Assignment
         _studentName = studentName;
         _topic = topic; 
     }
- // Method
+
     public string GetSummary()
     {
-        string summaryText = $" {_studentName} - {_topic}";
+        string summaryText = $"{_studentName} - {_topic}";
         return summaryText;
     }
     
-
+    public string GetStudentName()
+    {
+        return _studentName;
+    }
 }

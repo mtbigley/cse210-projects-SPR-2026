@@ -19,7 +19,11 @@ class Program
         Console.WriteLine(assignment1.GetHomeworkList());
 
         // Writing assignment
+        WritingAssignment assignment2 = new WritingAssignment("Mary Waters", "European History", "The Causes of World War 2");
 
-        
+        Console.WriteLine(assignment2.GetSummary());
+
+        Console.WriteLine(assignment2.GetWritingInformation());
+
     }
 }
