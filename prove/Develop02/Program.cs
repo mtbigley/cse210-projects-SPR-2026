@@ -8,7 +8,8 @@ class Program
         Prompt prompt = new Prompt();
 
         while (true)
-        {   
+        {      
+            Console.WriteLine(); 
             Console.WriteLine("Welcome to the Journal, please select form the menu.");
             Console.WriteLine("Menu options:");
             Console.WriteLine("1. Write");

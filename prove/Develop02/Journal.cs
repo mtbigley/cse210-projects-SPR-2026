@@ -36,15 +36,13 @@ public class Journal
                 _entries.Add(entry);
             }
     }
-
-    string fileName = "JournalEntries.txt";
     public void SaveToFile(string fileName)
-    {
-        using (StreamWriter outputFile = new StreamWriter(fileName))
-
-            foreach (Entry entry in _entries)
-            {
-                outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._entry}");
-            }
-    }
+        {
+            using (StreamWriter outputFile = new StreamWriter(fileName))
+    
+                foreach (Entry entry in _entries)
+                {
+                    outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._entry}");
+                }
+        }
 }
