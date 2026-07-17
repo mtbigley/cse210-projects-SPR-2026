@@ -10,7 +10,7 @@ class Program
         while (true)
         {      
             Console.WriteLine(); 
-            Console.WriteLine("Welcome to the Journal, please select form the menu.");
+            Console.WriteLine("Welcome to the Journal, please select from the menu.");
             Console.WriteLine("Menu options:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
@@ -49,7 +49,6 @@ class Program
                 Console.Write("Enter file name:");
                 string fileName = Console.ReadLine(); 
                 journal.LoadFromFile(fileName);
-                Console.WriteLine($"Journal {fileName} loaded successfully");
             }
 
             else if (input == "4")
@@ -57,7 +56,6 @@ class Program
                 Console.Write("Enter file name:");
                 string fileName = Console.ReadLine(); 
                 journal.SaveToFile(fileName);
-                Console.WriteLine($"Journal {fileName} saved successfully");
             }
 
             else if (input == "5")
