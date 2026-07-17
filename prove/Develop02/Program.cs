@@ -18,7 +18,7 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             Console.WriteLine();
-
+            Console.Write("Select an option: ");
             string input = Console.ReadLine();
 
             if (input == "1")
@@ -49,13 +49,15 @@ class Program
                 Console.Write("Enter file name:");
                 string fileName = Console.ReadLine(); 
                 journal.LoadFromFile(fileName);
+                Console.WriteLine($"Journal {fileName} loaded successfully");
             }
 
             else if (input == "4")
             {
-                Console.WriteLine("Enter file name:");
+                Console.Write("Enter file name:");
                 string fileName = Console.ReadLine(); 
                 journal.SaveToFile(fileName);
+                Console.WriteLine($"Journal {fileName} saved successfully");
             }
 
             else if (input == "5")

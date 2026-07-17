@@ -21,6 +21,8 @@ public class Journal
 
     public void LoadFromFile(string fileName)
     {
+        _entries.Clear();
+
         string[] lines = System.IO.File.ReadAllLines(fileName);
 
             foreach (string line in lines)
@@ -39,7 +41,7 @@ public class Journal
     public void SaveToFile(string fileName)
         {
             using (StreamWriter outputFile = new StreamWriter(fileName))
-    
+
                 foreach (Entry entry in _entries)
                 {
                     outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._entry}");
