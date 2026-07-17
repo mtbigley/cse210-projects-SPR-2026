@@ -1,3 +1,8 @@
+/* Exceeding requirements: 
+I added functionality to the UI to help the reader understand better where they were at in the program, including messages to 
+indicate successful loading and saving to files, and specifically error handing should the user accidentally enter a filename that 
+does not exist while trying to load a journal. I also added 5 more prompts for the user to answer in their journal.*/
+
 using System;
 
 class Program

@@ -21,7 +21,7 @@ public class Journal
 
     public void LoadFromFile(string fileName)
     {
-        if (File.Exists(fileName))
+        if (File.Exists(fileName)) // learned about this from a stack overflow post from almost 18 years ago: https://stackoverflow.com/questions/38960/how-to-find-out-if-a-file-exists-in-c-sharp-net
         {
             _entries.Clear();
 
