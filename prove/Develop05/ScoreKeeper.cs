@@ -29,4 +29,15 @@ public class ScoreKeeper
             goalDisplayNumber ++; 
         }
     }
+
+    public void RecordEvent(int goalIndex)
+    {
+        Goal goal = _goals[goalIndex];
+
+        int pointsEarned = goal.RecordEvent();
+
+        _score += pointsEarned; 
+
+        Console.WriteLine($"Good job completing {goal.GetName()}! You just earned {pointsEarned} points.");
+    }
 }
