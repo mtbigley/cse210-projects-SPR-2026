@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -18,10 +16,11 @@ class Program
             Console.WriteLine("Please choose from the menu:");
             Console.WriteLine("1. Create New Goal");
             Console.WriteLine("2. List Goals");
-            Console.WriteLine("3. Save Goals");
-            Console.WriteLine("4. Load Goals");
-            Console.WriteLine("5. Record Event");
-            Console.WriteLine("6. Quit");
+            Console.WriteLine("3. Display score");
+            Console.WriteLine("4. Save Goals");
+            Console.WriteLine("5. Load Goals");
+            Console.WriteLine("6. Record Event");
+            Console.WriteLine("7. Quit");
 
             int input = int.Parse(Console.ReadLine());
 
@@ -44,7 +43,11 @@ class Program
 
             else if (input == 3)
             {
-                
+                scoreKeeper.DisplayScore(); 
+
+                Console.WriteLine();
+                Console.WriteLine("Press Enter to return to the main menu.");
+                Console.ReadLine();
             }
 
             else if (input == 4)
@@ -54,6 +57,11 @@ class Program
 
             else if (input == 5)
             {
+                
+            }
+
+            else if (input == 6)
+            {
                 PromptRecordEvent(scoreKeeper);
 
                 Console.WriteLine(); 
@@ -61,7 +69,7 @@ class Program
                 Console.ReadLine();
             }
 
-            else if (input == 6)
+            else if (input == 7)
             {
                 return;
             }
