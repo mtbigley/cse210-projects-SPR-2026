@@ -1,43 +1,163 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     static void Main(string[] args)
     {
         ScoreKeeper scoreKeeper = new ScoreKeeper(); 
-        
-        SimpleGoal marathon = new SimpleGoal("Marathon", "Run 23 miles", 1000);
-        
-        EternalGoal scripture = new EternalGoal("Read Scriptures", "Daily scripture study", 100);
-        
-        ChecklistGoal temple = new ChecklistGoal("Attend Temple", "Do 12 temple sessions", 50, 10, 500);
 
-        scoreKeeper.CreateGoal(marathon);
-        scoreKeeper.CreateGoal(scripture);
-        scoreKeeper.CreateGoal(temple);
+        while (true)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Welcome to the Eternal Quest Program. What would you like to do?");
+            Console.WriteLine();
+            Console.WriteLine("Please choose from the menu:");
+            Console.WriteLine("1. Create New Goal");
+            Console.WriteLine("2. List Goals");
+            Console.WriteLine("3. Save Goals");
+            Console.WriteLine("4. Load Goals");
+            Console.WriteLine("5. Record Event");
+            Console.WriteLine("6. Quit");
 
-        Console.WriteLine("Starting Goals:");
-        scoreKeeper.ListGoals();
+            int input = int.Parse(Console.ReadLine());
 
-        Console.WriteLine(); 
-        Console.WriteLine("Recording Goals...");
+            if (input == 1)
+            {
+                PromptCreateGoal(scoreKeeper);
+            }
 
-        scoreKeeper.RecordEvent(0);
+            else if (input == 2)
+            {
+                scoreKeeper.ListGoals(); 
+            }
 
-        scoreKeeper.DisplayScore(); 
+            else if (input == 3)
+            {
+                
+            }
 
-        scoreKeeper.RecordEvent(1);
+            else if (input == 4)
+            {
+                
+            }
 
-        scoreKeeper.DisplayScore(); 
+            else if (input == 5)
+            {
+                
+            }
 
-        scoreKeeper.RecordEvent(2);
+            else if (input == 6)
+            {
+                return;
+            }
 
-        scoreKeeper.DisplayScore(); 
+            else
+            {
+                Console.WriteLine("Invalid entry-- please try again.");
+                Console.WriteLine();
+            }
+        }
 
-        Console.WriteLine(); 
-        Console.WriteLine("Goals after events:");
-        scoreKeeper.ListGoals();
+        static void PromptCreateGoal(ScoreKeeper scoreKeeper)
+        {
+            Console.WriteLine("What type of goal would you like to set for yourself?");
+            Console.WriteLine("1. Simple Goal");
+            Console.WriteLine("2. Eternal Goal");
+            Console.WriteLine("3. Checklist Goal");
+
+            int goalType = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("What is the name of your goal? ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Please describe what you'd like to achieve: ");
+            string description = Console.ReadLine();
+
+            Console.WriteLine("How many points is this goal worth? ");
+            int points = int.Parse(Console.ReadLine());
+
+
+            if (goalType == 1)
+            {
+                SimpleGoal goal = new SimpleGoal(name, description, points);
+
+                scoreKeeper.CreateGoal(goal);
+            }
+
+            else if (goalType == 2)
+            {
+                EternalGoal goal = new EternalGoal(name, description, points);
+
+                scoreKeeper.CreateGoal(goal);
+            }
+
+            else if (goalType == 3)
+            {
+                Console.WriteLine("How many times do you want to comlete this goal? ");
+                int target = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("How many bonus points when completed? ");
+                int bonus = int.Parse(Console.ReadLine());
+
+                ChecklistGoal goal = new ChecklistGoal(name, description, points, target, bonus);
+
+                scoreKeeper.CreateGoal(goal); 
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid entry, please try again. "); 
+            }
+
+        }
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEST CODE */
+        // SimpleGoal marathon = new SimpleGoal("Marathon", "Run 23 miles", 1000);
+        // EternalGoal scripture = new EternalGoal("Read Scriptures", "Daily scripture study", 100);
+        // ChecklistGoal temple = new ChecklistGoal("Attend Temple", "Do 12 temple sessions", 50, 10, 500);
+
+        // scoreKeeper.CreateGoal(marathon);
+        // scoreKeeper.CreateGoal(scripture);
+        // scoreKeeper.CreateGoal(temple);
+
+        // Console.WriteLine("Starting Goals:");
+        // scoreKeeper.ListGoals();
+
+        // Console.WriteLine(); 
+        // Console.WriteLine("Recording Goals...");
+
+        // scoreKeeper.RecordEvent(0);
+        // scoreKeeper.DisplayScore(); 
+
+        // scoreKeeper.RecordEvent(1);
+        // scoreKeeper.DisplayScore(); 
+
+        // scoreKeeper.RecordEvent(2);
+        // scoreKeeper.DisplayScore(); 
+
+        // Console.WriteLine(); 
+        // Console.WriteLine("Goals after events:");
+        // scoreKeeper.ListGoals();
 
