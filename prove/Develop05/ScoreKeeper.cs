@@ -24,7 +24,7 @@ public class ScoreKeeper
     {
         foreach (Goal goal in _goals)
         {
-            Console.WriteLine(); // time to write a getter
+            Console.WriteLine(goal.GetDetails()); 
         }
     }
 }

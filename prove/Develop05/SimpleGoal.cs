@@ -36,4 +36,9 @@ public class SimpleGoal : Goal
 
         return $"{checkbox} {GetName()} ({GetDescription()})";
     }
+
+    public override string GetStringRepresentation()
+    {
+        return $"SimpleGoal|{GetName()}|{GetDescription()}|{GetPoints()}|{_isComplete}";
+    }
 }

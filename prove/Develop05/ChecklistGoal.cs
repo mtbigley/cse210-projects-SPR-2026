@@ -58,4 +58,9 @@ public class ChecklistGoal : Goal
 
         return $"{checkbox} {GetName()} ({GetDescription()}) Completed {_amountCompleted}/{_target} times";
     }
+
+    public override string GetStringRepresentation()
+    {
+        return $"ChecklistGoal|{GetName()}|{GetDescription()}|{GetPoints()}|{_amountCompleted}|{_target}|{_bonus}";
+    }
 }
