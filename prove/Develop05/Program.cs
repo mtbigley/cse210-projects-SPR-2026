@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
@@ -53,7 +54,11 @@ class Program
 
             else if (input == 5)
             {
-                
+                PromptRecordEvent(scoreKeeper);
+
+                Console.WriteLine(); 
+                Console.WriteLine("Press Enter to return to the main menu.");
+                Console.ReadLine();
             }
 
             else if (input == 6)
@@ -119,6 +124,22 @@ class Program
                 Console.WriteLine("Invalid entry, please try again. "); 
             }
 
+        }
+
+        static void PromptRecordEvent(ScoreKeeper scoreKeeper)
+        {
+            Console.WriteLine("Which of the following goals did you complete?");
+            Console.WriteLine(); 
+
+            scoreKeeper.ListGoals(); 
+
+            Console.WriteLine(); 
+            Console.WriteLine("Please enter the corresponding number of the goal you completed: ");
+
+            int goalNumber = int.Parse(Console.ReadLine());
+            int goalIndex = goalNumber - 1; 
+
+            scoreKeeper.RecordEvent(goalIndex); 
         }
     }
 }

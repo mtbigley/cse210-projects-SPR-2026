@@ -32,6 +32,20 @@ public class ScoreKeeper
 
     public void RecordEvent(int goalIndex)
     {
+        if (goalIndex < 0)
+        {
+            Console.WriteLine("Invalid entry-- please try again."); 
+            return; 
+        }
+
+        else if (goalIndex >= _goals.Count)
+        {
+            Console.WriteLine("Invalid entry-- please try again.");
+            return; 
+        }
+
+        else
+        {
         Goal goal = _goals[goalIndex];
 
         int pointsEarned = goal.RecordEvent();
@@ -39,5 +53,6 @@ public class ScoreKeeper
         _score += pointsEarned; 
 
         Console.WriteLine($"Good job completing {goal.GetName()}! You just earned {pointsEarned} points.");
+        }
     }
 }
