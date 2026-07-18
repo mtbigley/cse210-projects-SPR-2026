@@ -46,4 +46,16 @@ public class ChecklistGoal : Goal
             return false; 
         }
     }
+
+    public override string GetDetails()
+    {
+        string checkbox = "[ ]";
+
+        if (IsComplete() == true)
+        {
+            checkbox = "[X]";
+        }
+
+        return $"{checkbox} {GetName()} ({GetDescription()}) Completed {_amountCompleted}/{_target} times";
+    }
 }

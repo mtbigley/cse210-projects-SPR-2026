@@ -24,4 +24,16 @@ public class SimpleGoal : Goal
     {
         return _isComplete;
     }
+
+    public override string GetDetails()
+    {
+        string checkbox = "[ ]";
+
+        if (_isComplete == true)
+        {
+            checkbox = "[X]";
+        }
+
+        return $"{checkbox} {GetName()} ({GetDescription()})";
+    }
 }

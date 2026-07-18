@@ -16,4 +16,9 @@ public class EternalGoal : Goal
     {
         return false; // Eternal goal is never complete and can be completed an infinite amount of times. 
     }
+
+    public override string GetDetails()
+    {
+        return $"[ ] {GetName()} ({GetDescription()})";
+    }
 }

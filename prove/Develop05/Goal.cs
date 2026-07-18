@@ -13,7 +13,7 @@ public abstract class Goal
         _points = points; 
     }
 
-    public string Getname()
+    public string GetName()
     {
         return _name;
     }
@@ -23,6 +23,12 @@ public abstract class Goal
         return _points;
     }
 
+    public string GetDescription()
+    {
+        return _description;
+    }
+
     public abstract int RecordEvent(); 
     public abstract bool IsComplete(); 
+    public abstract string GetDetails(); 
 }
