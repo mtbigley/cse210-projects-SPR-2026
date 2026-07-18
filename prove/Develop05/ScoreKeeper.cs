@@ -22,9 +22,11 @@ public class ScoreKeeper
 
     public void ListGoals()
     {
+        int goalDisplayNumber = 1;
         foreach (Goal goal in _goals)
         {
-            Console.WriteLine(goal.GetDetails()); 
+            Console.WriteLine($"{goalDisplayNumber}. {goal.GetDetails()}");
+            goalDisplayNumber ++; 
         }
     }
 }
