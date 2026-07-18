@@ -9,6 +9,8 @@ class Program
 
         while (true)
         {
+            Console.Clear(); 
+
             Console.WriteLine();
             Console.WriteLine("Welcome to the Eternal Quest Program. What would you like to do?");
             Console.WriteLine();
@@ -25,11 +27,18 @@ class Program
             if (input == 1)
             {
                 PromptCreateGoal(scoreKeeper);
+
+                Console.WriteLine("Goal Created. Press Enter to continue.");
+                Console.ReadLine(); 
             }
 
             else if (input == 2)
             {
                 scoreKeeper.ListGoals(); 
+
+                Console.WriteLine(); 
+                Console.WriteLine("Press Enter to return to the main menu.");
+                Console.ReadLine();
             }
 
             else if (input == 3)
@@ -94,7 +103,7 @@ class Program
 
             else if (goalType == 3)
             {
-                Console.WriteLine("How many times do you want to comlete this goal? ");
+                Console.WriteLine("How many times do you want to complete this goal? ");
                 int target = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("How many bonus points when completed? ");
