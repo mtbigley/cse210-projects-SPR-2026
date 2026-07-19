@@ -28,6 +28,14 @@ public class Video
 
     public void DisplayVideo()
     {
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Length: {_length}");
+        Console.WriteLine($"Comments count: {_comments.Count()}");
 
+        foreach (Comment comment in _comments)
+        {
+            Console.WriteLine($"User {} commented {}");
+        }
     }
 }
