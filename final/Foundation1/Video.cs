@@ -5,15 +5,13 @@ public class Video
     private string _title;
     private string _author; 
     private int _length; 
-    private List<Comment> _comments; 
+    private List<Comment> _comments = new List<Comment>(); 
 
     public Video(string title, string author, int length)
     {
         _title = title; 
         _author = author; 
         _length = length; 
-
-        List<Comment> _comments = new List<Comment>();
     }
 
     public void AddComment(Comment comment)
@@ -35,7 +33,7 @@ public class Video
 
         foreach (Comment comment in _comments)
         {
-            Console.WriteLine($"User {} commented {}");
+            Console.WriteLine($"User {comment.GetName()} commented: {comment.GetText()}");
         }
     }
 }

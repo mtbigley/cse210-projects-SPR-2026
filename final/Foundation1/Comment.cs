@@ -15,4 +15,14 @@ public class Comment
     {
         return $"User {_name} commented {_text}";    
     }
+
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetText()
+    {
+        return _text;
+    }
 }

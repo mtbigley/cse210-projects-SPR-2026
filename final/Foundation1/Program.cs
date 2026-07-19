@@ -18,6 +18,8 @@ class Program
         video2.AddComment(comment3);
         video2.AddComment(comment4);
 
-        
+        video1.DisplayVideo();
+        Console.WriteLine();
+        video2.DisplayVideo(); 
     }
 }
