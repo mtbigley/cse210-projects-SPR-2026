@@ -1,5 +1,4 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -51,7 +50,12 @@ class Program
 
             else if (input == 4)
             {
-                
+                scoreKeeper.SaveGoals("goals.txt");
+
+                Console.WriteLine(); 
+                Console.WriteLine("Press Enter to return to the main menu.");
+                Console.ReadLine();
+
             }
 
             else if (input == 5)

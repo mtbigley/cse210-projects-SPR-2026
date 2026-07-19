@@ -55,4 +55,22 @@ public class ScoreKeeper
         Console.WriteLine($"Good job completing {goal.GetName()}! You just earned {pointsEarned} points.");
         }
     }
+
+    public void SaveGoals(string filename)
+    {
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            outputFile.WriteLine(_score);
+
+            foreach (Goal goal in _goals)
+            {
+                outputFile.WriteLine(goal.GetStringRepresentation());
+            }
+        }
+    }
+
+    public void LoadGoals(string filename)
+    {
+        
+    }
 }
