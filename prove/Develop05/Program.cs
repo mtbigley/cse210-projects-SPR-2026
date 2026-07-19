@@ -1,3 +1,10 @@
+/* Exceeding requirements
+Most of what I did to exceed requirements for this program was implementing things like UI smoothing and user-error catches to prevent program crashes. 
+Instead of crashing the program altogether, most of the time where the user is concerned if they make a mistake or typo, the program simply returns to the main menu and allows
+the user to try again after telling them they've entered an invalid input. 
+I'd like to come back and maybe implement functionality to where the user can specify the name of their save file so that the program could handle multiple user's data of goals and
+progress, but for now I want to move on to my final project. */ 
+
 using System;
 
 class Program
@@ -162,51 +169,3 @@ class Program
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TEST CODE */
-        // SimpleGoal marathon = new SimpleGoal("Marathon", "Run 23 miles", 1000);
-        // EternalGoal scripture = new EternalGoal("Read Scriptures", "Daily scripture study", 100);
-        // ChecklistGoal temple = new ChecklistGoal("Attend Temple", "Do 12 temple sessions", 50, 10, 500);
-
-        // scoreKeeper.CreateGoal(marathon);
-        // scoreKeeper.CreateGoal(scripture);
-        // scoreKeeper.CreateGoal(temple);
-
-        // Console.WriteLine("Starting Goals:");
-        // scoreKeeper.ListGoals();
-
-        // Console.WriteLine(); 
-        // Console.WriteLine("Recording Goals...");
-
-        // scoreKeeper.RecordEvent(0);
-        // scoreKeeper.DisplayScore(); 
-
-        // scoreKeeper.RecordEvent(1);
-        // scoreKeeper.DisplayScore(); 
-
-        // scoreKeeper.RecordEvent(2);
-        // scoreKeeper.DisplayScore(); 
-
-        // Console.WriteLine(); 
-        // Console.WriteLine("Goals after events:");
-        // scoreKeeper.ListGoals();
-
