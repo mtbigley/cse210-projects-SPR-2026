@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -28,8 +29,6 @@ class Program
             {
                 PromptCreateGoal(scoreKeeper);
 
-                Console.WriteLine("Goal Created. Press Enter to continue.");
-                Console.ReadLine(); 
             }
 
             else if (input == 2)
@@ -90,6 +89,13 @@ class Program
 
             int goalType = int.Parse(Console.ReadLine());
 
+            if (goalType < 1 || goalType > 3)
+            {
+                Console.WriteLine("Invalid entry, press enter to try again. "); 
+                Console.ReadLine(); 
+                return;
+            }
+
             Console.WriteLine("What is the name of your goal? ");
             string name = Console.ReadLine();
 
@@ -98,7 +104,6 @@ class Program
 
             Console.WriteLine("How many points is this goal worth? ");
             int points = int.Parse(Console.ReadLine());
-
 
             if (goalType == 1)
             {
@@ -127,11 +132,8 @@ class Program
                 scoreKeeper.CreateGoal(goal); 
             }
 
-            else
-            {
-                Console.WriteLine("Invalid entry, please try again. "); 
-            }
-
+            Console.WriteLine("Goal Created. Press Enter to continue.");
+            Console.ReadLine(); 
         }
 
         static void PromptRecordEvent(ScoreKeeper scoreKeeper)
