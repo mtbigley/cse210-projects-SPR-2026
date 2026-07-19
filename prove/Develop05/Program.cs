@@ -52,7 +52,7 @@ class Program
             {
                 scoreKeeper.SaveGoals("goals.txt");
 
-                Console.WriteLine(); 
+                Console.WriteLine("Goals saved."); 
                 Console.WriteLine("Press Enter to return to the main menu.");
                 Console.ReadLine();
 
@@ -60,7 +60,12 @@ class Program
 
             else if (input == 5)
             {
-                
+                scoreKeeper.LoadGoals("goals.txt");
+
+                Console.WriteLine("Goals loaded.");
+                Console.WriteLine("Press Enter to return to the main menu.");
+                Console.ReadLine();
+
             }
 
             else if (input == 6)

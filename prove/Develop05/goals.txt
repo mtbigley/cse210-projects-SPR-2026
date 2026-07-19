@@ -1,0 +1,4 @@
+1025
+SimpleGoal|blar|blar 23 times|1000|True
+EternalGoal|read|read|25
+ChecklistGoal|ooblar|blard 25 times|25|1|25|1000
