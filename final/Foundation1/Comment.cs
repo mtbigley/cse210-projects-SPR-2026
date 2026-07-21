@@ -13,7 +13,7 @@ public class Comment
 
     public string DisplayComment()
     {
-        return $"User {_name} commented {_text}";    
+        return $"User {_name} commented: {_text}";    
     }
 
     public string GetName()
