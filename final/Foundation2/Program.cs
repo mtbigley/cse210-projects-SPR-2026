@@ -54,7 +54,7 @@ class Program
         Order orderFP = new Order(FernandoPanzacchi, productsFP);
 
         // Order 1
-        Console.WriteLine("Order 1");
+        Console.WriteLine("ORDER 1");
         Console.WriteLine();
 
         Console.WriteLine(orderMB.GetPackingLabel());
@@ -62,8 +62,28 @@ class Program
         Console.WriteLine();
         Console.WriteLine($"Order total:");
         Console.WriteLine($"${orderMB.CalculateTotalCost()}");
+        Console.WriteLine(); 
 
+        // Order 2 
+        Console.WriteLine("ORDER 2");
+        Console.WriteLine(); 
 
+        Console.WriteLine(orderJS.GetPackingLabel());
+        Console.WriteLine(orderJS.GetShippingLabel());
+        Console.WriteLine();
+        Console.WriteLine($"Order total:");
+        Console.WriteLine($"${orderJS.CalculateTotalCost()}");
+        Console.WriteLine(); 
 
+        // Order 3
+        Console.WriteLine("ORDER 3");
+        Console.WriteLine(); 
+
+        Console.WriteLine(orderFP.GetPackingLabel());
+        Console.WriteLine(orderFP.GetShippingLabel());
+        Console.WriteLine();
+        Console.WriteLine($"Order total:");
+        Console.WriteLine($"${orderFP.CalculateTotalCost()}"); 
+        Console.WriteLine();
     }
 }
