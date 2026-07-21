@@ -59,7 +59,10 @@ class Program
 
         Console.WriteLine(orderMB.GetPackingLabel());
         Console.WriteLine(orderMB.GetShippingLabel());
-        
+        Console.WriteLine();
+        Console.WriteLine($"Order total:");
+        Console.WriteLine($"${orderMB.CalculateTotalCost()}");
+
 
 
     }

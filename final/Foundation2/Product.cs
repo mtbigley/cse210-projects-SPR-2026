@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 
 public class Product
 {
@@ -29,5 +30,10 @@ public class Product
     public string GetProductID()
     {
         return _productID;
+    }
+
+    public int GetQuantity()
+    {
+        return _quantity; 
     }
 }
