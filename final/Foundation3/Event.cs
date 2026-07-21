@@ -20,7 +20,8 @@ public abstract class Event
 
     public string GetStandardDetails()
     {
-        
+        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date} Time: {_time}\n Address:\n {_address} ";
+        return standardDetailsString;
     }
 
     public string GetFullDetails()
