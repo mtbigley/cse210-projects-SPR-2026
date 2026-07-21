@@ -18,17 +18,32 @@ public abstract class Event
         _address = address; 
     }
 
+    public string GetTitle()
+    {
+        return _title; 
+    }
+
+    public string GetDescription()
+    {
+        return _description; 
+    }
+
+    public string GetDate()
+    {
+        return _date; 
+    }
+
+    public string GetTime()
+    {
+        return _time; 
+    }
     public string GetStandardDetails()
     {
-        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date} Time: {_time}\n Address:\n {_address} ";
+        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date} Time: {_time}\n Address:\n {_address.GetFullAddress()}";
         return standardDetailsString;
     }
 
-    public string GetFullDetails()
-    {
-        
-    }
-
+    public abstract string GetFullDetails();
     public string GetShortDescription()
     {
         return _description; 
