@@ -1,7 +1,7 @@
 using System;
 using System.Net.Sockets;
 
-public abstract class Event
+public class Event
 {
     private string _title; 
     private string _description; 
@@ -39,11 +39,14 @@ public abstract class Event
     }
     public string GetStandardDetails()
     {
-        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date} Time: {_time}\n Address:\n {_address.GetFullAddress()}";
+        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date}\nTime: {_time}\nAddress:{_address.GetFullAddress()}";
         return standardDetailsString;
     }
 
-    public abstract string GetFullDetails();
+    public void GetFullDetails()
+    {
+        return;
+    }
     public string GetShortDescription()
     {
         return _description; 
