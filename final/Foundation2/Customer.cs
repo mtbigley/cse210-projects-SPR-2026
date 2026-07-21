@@ -5,7 +5,6 @@ public class Customer
 {
     private string _name;
     private Address _address; 
-    private bool _livesInUSA; 
 
     public Customer(string name, Address address)
     {
@@ -15,7 +14,7 @@ public class Customer
 
     public bool LivesInUSA()
     {
-        return _livesInUSA;
+        return _address.IsUSA();
     }
 
     public string GetName()
@@ -26,5 +25,11 @@ public class Customer
     public Address GetAddress()
     {
         return _address;
+    }
+
+    public string GetFullAddress()
+    {
+
+        return _address.GetFullAddress();
     }
 }
