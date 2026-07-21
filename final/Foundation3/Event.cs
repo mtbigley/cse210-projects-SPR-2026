@@ -43,12 +43,13 @@ public class Event
         return standardDetailsString;
     }
 
-    public void GetFullDetails()
+    public virtual string GetFullDetails()
     {
-        return;
+        return GetStandardDetails(); 
+
     }
-    public string GetShortDescription()
+    public virtual string GetShortDescription()
     {
-        return _description; 
+        return $"Type of event: Lecture\nTitle: {_title}\nDate: {_date}"; 
     }
 }
