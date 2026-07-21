@@ -37,7 +37,7 @@ public class Order
 
     public string GetPackingLabel()
     {
-        string packingLabel = "Package Contents: \n";
+        string packingLabel = "Packing Label: \n";
         packingLabel += "------------\n";
 
         foreach (Product product in _products)

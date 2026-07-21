@@ -35,6 +35,32 @@ class Program
         List<Product> productsJS = new List<Product>();
         List<Product> productsFP = new List<Product>(); 
 
+        // add products to lists
+        productsMB.Add(mbsnack1); // had a hiccup here that took me a minute to find; originally I was using the append method instead of the add method which resulted in my lists not being populated-- cool to learn about .Append() vs .Add()!! Thanks Vera from Stack Overflow in 2020 https://stackoverflow.com/questions/61022245/c-sharp-list-add-works-but-not-append
+        productsMB.Add(mbsnack2);
+        productsMB.Add(mbsnack3);
+
+        productsJS.Add(jsproduct1);
+        productsJS.Add(jssnack1);
+        productsJS.Add(jssnack2);
+
+        productsFP.Add(fpproduct1);
+        productsFP.Add(fpproduct2);
+        productsFP.Add(fpsnack1);
+
+        // Orders 
+        Order orderMB = new Order(MichaelBigley, productsMB);
+        Order orderJS = new Order(JoeSchmoe, productsJS);
+        Order orderFP = new Order(FernandoPanzacchi, productsFP);
+
+        // Order 1
+        Console.WriteLine("Order 1");
+        Console.WriteLine();
+
+        Console.WriteLine(orderMB.GetPackingLabel());
+        Console.WriteLine(orderMB.GetShippingLabel());
         
+
+
     }
 }
