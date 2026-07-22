@@ -4,11 +4,13 @@ public abstract class Activity
 {
     private string _date; 
     private int _minutes; 
+    private string _activityName;
 
-    public Activity(string date, int minutes)
+    public Activity(string date, int minutes, string activityName)
     {
         _date = date;
         _minutes = minutes; 
+        _activityName = activityName;
     }
 
     public string GetDate()
@@ -19,24 +21,29 @@ public abstract class Activity
     {
         return _minutes; 
     }
-    
+
+    public string GetActivityName()
+    {
+        return _activityName; 
+    }
+
     public virtual double GetDistance()
     {
-        
+        return 0;
     }
 
     public virtual double GetSpeed()
     {
-        
+        return 0;
     }
 
     public virtual double GetPace()
     {
-        
+        return 0;
     }
 
     public virtual string GetSummary()
     {
-        
+        return $"{_date} {_activityName} ({_minutes} min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace {GetPace()} min per mile.";
     }
 }
