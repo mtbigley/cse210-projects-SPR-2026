@@ -11,7 +11,7 @@ public class Reception : Event
 
     public override string GetFullDetails()
     {
-        return $"\n{GetStandardDetails()}\nEvent type: Reception\nRSVP Email: {_rsvpEmail}";
+        return $"{GetStandardDetails()}\nEvent type: Reception\nRSVP Email: {_rsvpEmail}";
     }
 
         public override string GetShortDescription()

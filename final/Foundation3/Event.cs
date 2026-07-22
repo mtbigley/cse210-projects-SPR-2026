@@ -1,5 +1,4 @@
 using System;
-using System.Net.Sockets;
 
 public class Event
 {
@@ -49,6 +48,6 @@ public class Event
     }
     public virtual string GetShortDescription()
     {
-        return $"Type of event: Lecture\nTitle: {_title}\nDate: {_date}"; 
+        return $"Title: {_title}\nDate: {_date}"; 
     }
 }
