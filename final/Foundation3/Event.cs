@@ -39,8 +39,7 @@ public class Event
     }
     public string GetStandardDetails()
     {
-        string standardDetailsString = $"{_title}\n----------\n{_description}\nDate: {_date}\nTime: {_time}\nAddress:{_address.GetFullAddress()}";
-        return standardDetailsString;
+        return $"{_title}\n----------\n{_description}\nDate: {_date}\nTime: {_time}\nAddress: {_address.GetFullAddress()}";
     }
 
     public virtual string GetFullDetails()
