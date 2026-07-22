@@ -1,6 +1,6 @@
 using System; 
 
-public abstract class Activity
+public class Activity
 {
     private string _date; 
     private int _minutes; 
@@ -44,6 +44,6 @@ public abstract class Activity
 
     public virtual string GetSummary()
     {
-        return $"{_date} {_activityName} ({_minutes} min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace {GetPace()} min per mile.";
+        return $"{_date} {_activityName} ({_minutes} min)- Distance {GetDistance():F1} miles, Speed {GetSpeed():F1} mph, Pace {GetPace():F1} min per mile.";
     }
 }
