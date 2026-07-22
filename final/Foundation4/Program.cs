@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation4 World!");
+        Running run = new Running("22 Jul 2026", 40, "Running", 5);
+
+        Console.WriteLine(run.GetSummary());
     }
 }
